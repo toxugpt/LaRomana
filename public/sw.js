@@ -1,5 +1,5 @@
 const CACHE_NAME = 'bar-menu-cache-v1'
-const PRECACHE_URLS = ['/', '/index.html', '/manifest.webmanifest', '/favicon.svg']
+const PRECACHE_URLS = ['./', './index.html', './manifest.webmanifest', './favicon.svg']
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
@@ -43,7 +43,7 @@ self.addEventListener('fetch', (event) => {
           return response
         })
         .catch(() => {
-          return caches.match('/index.html')
+          return caches.match('./index.html')
         })
     }),
   )
