@@ -245,7 +245,7 @@ function WelcomePage({ onEnterMenu }) {
   )
 }
 
-function MenuPage() {
+function MenuPage({ onBackToWelcome }) {
   return (
     <div className="menu-page">
       <header className="menu-header">
@@ -255,6 +255,9 @@ function MenuPage() {
           <p className="subtitle">
             Menú completo con precios actualizados.
           </p>
+          <button className="back-button" onClick={onBackToWelcome}>
+            ← Volver al Inicio
+          </button>
         </div>
       </header>
 
@@ -292,56 +295,15 @@ function MenuPage() {
 }
 
 function App() {
+  const [showMenu, setShowMenu] = useState(false)
+
   return (
     <div className="app-shell">
-      <div className="welcome-page">
-        <header className="welcome-hero">
-          <div className="welcome-content">
-            <span className="welcome-eyebrow">Bienvenido a</span>
-            <h1 className="welcome-title">La Romana</h1>
-            <p className="welcome-subtitle">
-              Descubre nuestra selección de bebidas premium en un ambiente único.
-            </p>
-          </div>
-        </header>
-
-        <section className="featured-section">
-          <div className="sliders-container">
-            <Slider items={smoothies} title="Nuestros Smoothies" />
-            <Slider items={cocktails} title="Cócteles Destacados" />
-          </div>
-        </section>
-
-        <section className="menu-section">
-          <div className="menu-container">
-            <h2 className="menu-title">Nuestra Carta Completa</h2>
-            {menuSections.map((section) => (
-              <section key={section.title} className="section">
-                <h3>{section.title}</h3>
-                <div className="product-grid">
-                  {section.items.map((item) => (
-                    <article key={item.id} className="product-card">
-                      <div className="product-image">
-                        <span>Imagen pendiente</span>
-                      </div>
-                      <div className="product-info">
-                        <div className="product-header">
-                          <strong>{item.name}</strong>
-                          <span>{item.price}</span>
-                        </div>
-                      </div>
-                    </article>
-                  ))}
-                </div>
-              </section>
-            ))}
-          </div>
-        </section>
-
-        <footer className="welcome-footer">
-          <p>Disfruta de una experiencia inolvidable</p>
-        </footer>
-      </div>
+      {showMenu ? (
+        <MenuPage onBackToWelcome={() => setShowMenu(false)} />
+      ) : (
+        <WelcomePage onEnterMenu={() => setShowMenu(true)} />
+      )}
     </div>
   )
 }
