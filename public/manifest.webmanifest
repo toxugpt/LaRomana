@@ -1,7 +1,7 @@
 {
-  "name": "Carta del Bar",
-  "short_name": "Carta Bar",
-  "description": "PWA minimalista para acceso a la carta del bar por QR estático.",
+  "name": "La Romana - Bar",
+  "short_name": "La Romana",
+  "description": "PWA del bar La Romana con menú completo y acceso offline.",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#000000",
