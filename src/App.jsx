@@ -252,9 +252,6 @@ function MenuPage({ onBackToWelcome }) {
         <div className="menu-hero">
           <span className="eyebrow">La Romana</span>
           <h1>Carta del Bar</h1>
-          <p className="subtitle">
-            Menú completo con precios actualizados.
-          </p>
           <button className="back-button" onClick={onBackToWelcome}>
             ← Volver al Inicio
           </button>
