@@ -1,0 +1,162 @@
+.app-shell {
+  min-height: 100vh;
+  padding: 24px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(240px, 1fr);
+  gap: 28px;
+  align-items: start;
+  margin-bottom: 40px;
+}
+
+.hero-copy {
+  display: grid;
+  gap: 18px;
+}
+
+.eyebrow {
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  font-size: 0.75rem;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  margin: 0;
+  line-height: 1.05;
+}
+
+.subtitle {
+  max-width: 55ch;
+  margin: 0;
+  color: #c7c7c7;
+  font-size: 1rem;
+}
+
+.qr-panel {
+  padding: 24px;
+  border: 1px solid #fff;
+  background: #111;
+  display: grid;
+  gap: 16px;
+  justify-items: center;
+  text-align: center;
+}
+
+.qr-frame {
+  width: 100%;
+  max-width: 280px;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  background: #fff;
+  padding: 16px;
+}
+
+.qr-code {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.qr-loading {
+  color: #000;
+  font-size: 0.9rem;
+}
+
+.qr-note {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #ddd;
+}
+
+.menu {
+  display: grid;
+  gap: 28px;
+}
+
+.section h2 {
+  margin: 0 0 12px;
+  font-size: 1.75rem;
+}
+
+.section-copy {
+  margin: 0 0 24px;
+  color: #c7c7c7;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  border: 1px solid #fff;
+  padding: 20px;
+  display: grid;
+  gap: 16px;
+}
+
+.product-image {
+  min-height: 180px;
+  background: #111;
+  border: 1px solid #333;
+  display: grid;
+  place-items: center;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.85rem;
+}
+
+.product-info {
+  display: grid;
+  gap: 10px;
+}
+
+.product-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.product-header strong {
+  font-size: 1.05rem;
+}
+
+.product-header span {
+  color: #999;
+}
+
+.product-card p {
+  margin: 0;
+  color: #c7c7c7;
+  line-height: 1.6;
+}
+
+.footer {
+  padding: 20px 0 10px;
+  border-top: 1px solid #333;
+}
+
+.footer p {
+  margin: 0;
+  color: #999;
+}
+
+@media (max-width: 760px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .qr-panel {
+    padding: 18px;
+  }
+}
