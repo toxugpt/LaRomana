@@ -18,3 +18,4 @@ Carta digital del bar La Romana construida con React, Vite y Bootstrap.
 ## Copyright
 
 Copyright 2026 La Romana. Todos los derechos reservados.
+
