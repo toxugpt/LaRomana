@@ -10,6 +10,10 @@
   padding: 1rem;
 }
 
+.hero-carousel-wrap {
+  padding-top: 1.5rem;
+}
+
 .hero-slide {
   color: #f8f5ef;
   isolation: isolate;
@@ -58,20 +62,16 @@
   text-transform: uppercase;
 }
 
-.hero-glass {
-  background: rgba(248, 245, 239, 0.92);
-  backdrop-filter: blur(14px);
-  border-radius: 1.5rem;
-  max-width: 24rem;
-}
-
 .slider-brand {
-  color: #241a12;
   font-family: Georgia, 'Times New Roman', serif;
   font-size: clamp(2.5rem, 5vw, 3.6rem);
   font-style: italic;
   font-weight: 600;
   letter-spacing: -0.04em;
+}
+
+.slider-brand--top {
+  color: #c9a86a;
 }
 
 .carousel-indicators {
@@ -140,10 +140,6 @@
 
   .min-vh-60 {
     min-height: auto;
-  }
-
-  .hero-glass {
-    max-width: 100%;
   }
 }
 

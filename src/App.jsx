@@ -191,58 +191,59 @@ const menuSections = [
 
 function HeroCarousel() {
   return (
-    <div
-      id="featuredCarousel"
-      className="carousel slide carousel-fade hero-carousel"
-      data-bs-ride="carousel"
-      data-bs-interval="3800"
-      data-bs-pause="false"
-    >
-      <div className="carousel-indicators">
-        {featuredSlides.map((slide, index) => (
-          <button
-            key={slide.id}
-            type="button"
-            data-bs-target="#featuredCarousel"
-            data-bs-slide-to={index}
-            className={index === 0 ? 'active' : ''}
-            aria-current={index === 0 ? 'true' : undefined}
-            aria-label={`Slide ${index + 1}`}
-          />
-        ))}
+    <div className="hero-carousel-wrap">
+      <div className="container">
+        <div className="text-center">
+          <h2 className="slider-brand slider-brand--top mb-3">La Romana</h2>
+        </div>
       </div>
 
-      <div className="carousel-inner overflow-hidden rounded-5">
-        {featuredSlides.map((slide, index) => (
-          <div
-            key={slide.id}
-            className={`carousel-item ${index === 0 ? 'active' : ''}`}
-          >
-            <div className={`hero-slide ${slide.accent}`}>
-              <div className="hero-slide__overlay" />
-              <div className="container position-relative py-5">
-                <div className="row min-vh-60 align-items-center">
-                  <div className="col-lg-7">
-                    <span className="badge rounded-pill text-bg-light hero-badge">
-                      {slide.badge}
-                    </span>
-                    <h1 className="display-3 fw-semibold mt-3 hero-title">
-                      {slide.title}
-                    </h1>
-                    <p className="lead hero-copy mb-0">{slide.subtitle}</p>
-                  </div>
-                  <div className="col-lg-5 mt-4 mt-lg-0">
-                    <div className="hero-glass card border-0 shadow-lg ms-lg-auto">
-                      <div className="card-body p-4 p-md-5 text-center">
-                        <h2 className="slider-brand mb-0">La Romana</h2>
-                      </div>
+      <div
+        id="featuredCarousel"
+        className="carousel slide carousel-fade hero-carousel"
+        data-bs-ride="carousel"
+        data-bs-interval="3800"
+        data-bs-pause="false"
+      >
+        <div className="carousel-indicators">
+          {featuredSlides.map((slide, index) => (
+            <button
+              key={slide.id}
+              type="button"
+              data-bs-target="#featuredCarousel"
+              data-bs-slide-to={index}
+              className={index === 0 ? 'active' : ''}
+              aria-current={index === 0 ? 'true' : undefined}
+              aria-label={`Slide ${index + 1}`}
+            />
+          ))}
+        </div>
+
+        <div className="carousel-inner overflow-hidden rounded-5">
+          {featuredSlides.map((slide, index) => (
+            <div
+              key={slide.id}
+              className={`carousel-item ${index === 0 ? 'active' : ''}`}
+            >
+              <div className={`hero-slide ${slide.accent}`}>
+                <div className="hero-slide__overlay" />
+                <div className="container position-relative py-5">
+                  <div className="row min-vh-60 align-items-center">
+                    <div className="col-lg-7">
+                      <span className="badge rounded-pill text-bg-light hero-badge">
+                        {slide.badge}
+                      </span>
+                      <h1 className="display-3 fw-semibold mt-3 hero-title">
+                        {slide.title}
+                      </h1>
+                      <p className="lead hero-copy mb-0">{slide.subtitle}</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   )
